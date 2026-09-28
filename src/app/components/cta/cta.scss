@@ -29,9 +29,11 @@
 .consultation-form select option { color: var(--on-surface); }
 .consultation-form input::placeholder, .consultation-form textarea::placeholder { color: rgba(243,240,234,.55); }
 .consultation-form input:focus, .consultation-form select:focus, .consultation-form textarea:focus { outline: 2px solid var(--primary-fixed-dim); outline-offset: 2px; border-color: var(--primary-fixed-dim); }
+.consultation-form button:disabled { cursor: wait; opacity: .65; }
 .consultation-form .btn-primary { grid-column: 1 / -1; justify-self: center; margin-top: 8px; }
 .form-note { margin-top: 18px; color: rgba(243,240,234,.6); font-size: 12px; }
 .form-success { margin-top: 18px; color: var(--primary-fixed-dim); font-size: 14px; }
+.form-error { margin-top: 18px; color: #ffb4a2; font-size: 14px; }
 @media (max-width: 640px) { .consultation-form { grid-template-columns: 1fr; } .consultation-form label.wide, .consultation-form .btn-primary { grid-column: auto; } }
 
 .cta-title {

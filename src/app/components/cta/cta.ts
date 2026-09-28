@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class CtaComponent {
   submitted = false;
+  isSubmitting = false;
+  submitError = false;
 
-  submitForm(event: SubmitEvent) {
+  async submitForm(event: SubmitEvent) {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const data = new FormData(form);
@@ -17,12 +19,33 @@ export class CtaComponent {
     const phone = String(data.get('phone') ?? '');
     const projectType = String(data.get('projectType') ?? '');
     const message = String(data.get('message') ?? '');
-    const subject = encodeURIComponent(`New consultation request from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nProject type: ${projectType}\n\nProject details:\n${message}`
-    );
+    this.isSubmitting = true;
+    this.submitError = false;
 
-    window.location.href = `mailto:abhisheknishad167@yahoo.com?subject=${subject}&body=${body}`;
-    this.submitted = true;
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/abhisheknishad167@yahoo.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          projectType,
+          message,
+          _subject: `New consultation request from ${name}`,
+          _captcha: 'true'
+        })
+      });
+
+      if (!response.ok) throw new Error('Consultation request failed');
+      this.submitted = true;
+      form.reset();
+    } catch {
+      this.submitError = true;
+    } finally {
+      this.isSubmitting = false;
+    }
   }
 }
