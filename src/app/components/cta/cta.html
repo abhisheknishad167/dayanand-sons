@@ -10,6 +10,7 @@
     <form class="consultation-form" (submit)="submitForm($event)" [class.submitted]="submitted" [attr.aria-busy]="isSubmitting">
       <label><span>Your name</span><input type="text" name="name" autocomplete="name" placeholder="Enter your name" required /></label>
       <label><span>Phone number</span><input type="tel" name="phone" autocomplete="tel" placeholder="+91" required /></label>
+      <label><span>Email address</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label>
       <label><span>Project type</span><select name="projectType"><option>Residential</option><option>Commercial</option><option>Industrial</option><option>Restoration</option></select></label>
       <label class="wide"><span>Tell us about the project</span><textarea name="message" rows="3" placeholder="Location, size, or the kind of support you need"></textarea></label>
       <button type="submit" class="btn-primary" [disabled]="isSubmitting">{{ isSubmitting ? 'Sending…' : 'Request Consultation' }} <span aria-hidden="true">↗</span></button>

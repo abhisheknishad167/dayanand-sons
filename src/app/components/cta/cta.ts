@@ -17,6 +17,7 @@ export class CtaComponent {
     const data = new FormData(form);
     const name = String(data.get('name') ?? '');
     const phone = String(data.get('phone') ?? '');
+    const email = String(data.get('email') ?? '');
     const projectType = String(data.get('projectType') ?? '');
     const message = String(data.get('message') ?? '');
     this.isSubmitting = true;
@@ -32,6 +33,7 @@ export class CtaComponent {
         body: JSON.stringify({
           name,
           phone,
+          email,
           projectType,
           message,
           _subject: `New consultation request from ${name}`,
