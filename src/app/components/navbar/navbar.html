@@ -1,0 +1,19 @@
+<header class="navbar">
+  <nav class="nav-container">
+    <a class="brand" href="#home" aria-label="Dayanand and Sons home">
+      <span class="brand-mark" aria-hidden="true">D<span>&amp;</span>S</span>
+      <span class="brand-copy"><span>Dayanand <i>&amp;</i> Sons</span><small>Engineering &amp; Construction</small></span>
+    </a>
+    <div class="nav-links" id="primary-navigation" [class.open]="menuOpen">
+      <a href="#home" class="active" (click)="closeMenu()">Home</a>
+      <a href="#about" (click)="closeMenu()">About</a>
+      <a href="#services" (click)="closeMenu()">Services</a>
+      <a href="#projects" (click)="closeMenu()">Projects</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
+    </div>
+    <a class="cta-btn" href="#contact">Request Consultation</a>
+    <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-controls="primary-navigation" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>

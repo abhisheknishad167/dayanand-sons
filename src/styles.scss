@@ -1,0 +1,61 @@
+:root {
+  --surface: #fcf9f3;
+  --surface-dim: #dcdad4;
+  --surface-bright: #fcf9f3;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f6f3ed;
+  --surface-container: #f0eee8;
+  --surface-container-high: #ebe8e2;
+  --surface-container-highest: #e5e2dc;
+  --on-surface: #1c1c18;
+  --on-surface-variant: #56423d;
+  --inverse-surface: #31312d;
+  --inverse-on-surface: #f3f0ea;
+  --outline: #8a726c;
+  --outline-variant: #ddc0ba;
+  --primary: #8f341d;
+  --on-primary: #ffffff;
+  --primary-container: #af4b32;
+  --on-primary-container: #ffe6e0;
+  --primary-fixed: #ffdad2;
+  --primary-fixed-dim: #ffb4a2;
+  --secondary: #5f5e5e;
+  --on-secondary: #ffffff;
+  --secondary-container: #e4e2e1;
+  --secondary-fixed-dim: #c8c6c5;
+  --tertiary: #674e17;
+  --gold: #D4AF37;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  scroll-behavior: smooth;
+}
+
+body { overflow-x: hidden; }
+a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.concrete-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blueprint-lines {
+  background-image:
+    linear-gradient(var(--surface-container-highest) 1px, transparent 1px),
+    linear-gradient(90deg, var(--surface-container-highest) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

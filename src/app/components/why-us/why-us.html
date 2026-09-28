@@ -1,0 +1,53 @@
+<section class="why-us" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="bento-grid">
+      <div class="bento-intro">
+        <div class="concrete-grain"></div>
+        <h2 class="intro-title">
+          <span id="about-title">Why Partners Choose <span class="accent">Dayanand &amp; Sons</span></span>
+        </h2>
+        <p class="intro-desc">
+          Beyond mere construction, we offer a legacy of engineering integrity that secures your investment for generations.
+        </p>
+      </div>
+
+      @for (feature of features; track feature.icon) {
+        <div class="feature-card">
+          <span class="material-symbols-outlined feature-icon">{{ feature.icon }}</span>
+          <h4 class="feature-title">{{ feature.title }}</h4>
+          <p class="feature-desc">{{ feature.description }}</p>
+        </div>
+      }
+
+      <div class="stats-card">
+        <div class="stats-inner">
+          <div class="stats-row">
+            @for (stat of stats; track stat.value; let last = $last) {
+              <div class="stat-item">
+                <div class="stat-value">{{ stat.value }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+              </div>
+              @if (!last) {
+                <div class="stat-divider"></div>
+              }
+            }
+          </div>
+          <span class="material-symbols-outlined stats-icon">engineering</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-block">
+      <div>
+        <span class="eyebrow">A clear path from brief to build</span>
+        <h3>How we move a project forward</h3>
+      </div>
+      <div class="process-steps">
+        <div class="process-step"><span>01</span><strong>Consultation</strong><p>Understand the brief, site, and ambition.</p></div>
+        <div class="process-step"><span>02</span><strong>Planning</strong><p>Shape the right technical and commercial plan.</p></div>
+        <div class="process-step"><span>03</span><strong>Execution</strong><p>Coordinate people, materials, and quality.</p></div>
+        <div class="process-step"><span>04</span><strong>Handover</strong><p>Finish carefully and support what comes next.</p></div>
+      </div>
+    </div>
+  </div>
+</section>

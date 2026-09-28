@@ -1,0 +1,23 @@
+<section class="cta" id="contact" aria-labelledby="contact-title">
+  <div class="blueprint-lines bg-pattern"></div>
+  <div class="container">
+    <h2 class="cta-title" id="contact-title">
+      Ready to Build Your <span class="accent">Legacy?</span>
+    </h2>
+    <p class="cta-desc">
+      Consult with our lead engineers today to discuss your next residential or commercial project in Pune.
+    </p>
+    <form class="consultation-form" (submit)="submitForm($event)" [class.submitted]="submitted">
+      <label><span>Your name</span><input type="text" name="name" autocomplete="name" placeholder="Enter your name" required /></label>
+      <label><span>Phone number</span><input type="tel" name="phone" autocomplete="tel" placeholder="+91" required /></label>
+      <label><span>Project type</span><select name="projectType"><option>Residential</option><option>Commercial</option><option>Industrial</option><option>Restoration</option></select></label>
+      <label class="wide"><span>Tell us about the project</span><textarea name="message" rows="3" placeholder="Location, size, or the kind of support you need"></textarea></label>
+      <button type="submit" class="btn-primary">Request Consultation <span aria-hidden="true">↗</span></button>
+    </form>
+    @if (submitted) {
+      <p class="form-success" role="status">Thank you — your enquiry is ready to be connected to the Dayanand &amp; Sons team.</p>
+    } @else {
+      <p class="form-note">Your email app will open with this enquiry addressed to <a href="mailto:abhisheknishad167@yahoo.com">abhisheknishad167@yahoo.com</a>.</p>
+    }
+  </div>
+</section>
