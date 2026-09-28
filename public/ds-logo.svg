@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dayanand and Sons logo">
+  <rect width="64" height="64" rx="14" fill="#8f341d"/>
+  <rect x="7" y="7" width="50" height="50" rx="10" fill="none" stroke="#d4af37" stroke-width="2"/>
+  <text x="32" y="41" text-anchor="middle" fill="#fffaf1" font-family="Georgia, serif" font-size="25" font-weight="700" letter-spacing="-4">D&amp;S</text>
+</svg>
