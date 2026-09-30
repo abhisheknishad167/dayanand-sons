@@ -1,4 +1,4 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,39 +6,33 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
-export class NavbarComponent implements OnInit, OnDestroy {
+export class NavbarComponent implements OnInit {
   menuOpen = false;
   activeSection = 'home';
   isScrolled = false;
 
-  private sectionObserver?: IntersectionObserver;
-
   ngOnInit(): void {
-    this.sectionObserver = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (visibleSection) {
-          this.activeSection = visibleSection.target.id;
-        }
-      },
-      { rootMargin: '-18% 0px -62% 0px', threshold: [0, 0.25, 0.6] }
-    );
-
-    document.querySelectorAll('main section[id]').forEach((section) => {
-      this.sectionObserver?.observe(section);
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.sectionObserver?.disconnect();
+    this.updateActiveSection();
   }
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
     this.isScrolled = window.scrollY > 12;
+    this.updateActiveSection();
+  }
+
+  private updateActiveSection(): void {
+    const navOffset = document.querySelector('.navbar')?.getBoundingClientRect().height ?? 0;
+    const scrollPosition = window.scrollY + navOffset + 24;
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('main section[id]'));
+
+    const currentSection = sections
+      .filter((section) => section.offsetTop <= scrollPosition)
+      .at(-1);
+
+    if (currentSection) {
+      this.activeSection = currentSection.id;
+    }
   }
 
   @HostListener('document:keydown.escape')
