@@ -1,19 +1,19 @@
-<header class="navbar">
+<header class="navbar" [class.scrolled]="isScrolled" [class.menu-open]="menuOpen">
   <nav class="nav-container">
-    <a class="brand" href="#home" aria-label="Dayanand and Sons home">
+    <a class="brand" href="#home" aria-label="Dayanand and Sons home" (click)="selectSection('home')">
       <span class="brand-mark" aria-hidden="true">D<span>&amp;</span>S</span>
       <span class="brand-copy"><span>Dayanand <i>&amp;</i> Sons</span><small>Engineering &amp; Construction</small></span>
     </a>
     <div class="nav-links" id="primary-navigation" [class.open]="menuOpen">
-      <a href="#home" class="active" (click)="closeMenu()">Home</a>
-      <a href="#about" (click)="closeMenu()">About</a>
-      <a href="#services" (click)="closeMenu()">Services</a>
-      <a href="#projects" (click)="closeMenu()">Projects</a>
-      <a href="#contact" (click)="closeMenu()">Contact</a>
+      <a href="#home" [class.active]="activeSection === 'home'" [attr.aria-current]="activeSection === 'home' ? 'page' : null" (click)="selectSection('home')">Home</a>
+      <a href="#about" [class.active]="activeSection === 'about'" [attr.aria-current]="activeSection === 'about' ? 'page' : null" (click)="selectSection('about')">About</a>
+      <a href="#services" [class.active]="activeSection === 'services'" [attr.aria-current]="activeSection === 'services' ? 'page' : null" (click)="selectSection('services')">Services</a>
+      <a href="#projects" [class.active]="activeSection === 'projects'" [attr.aria-current]="activeSection === 'projects' ? 'page' : null" (click)="selectSection('projects')">Projects</a>
+      <a href="#contact" [class.active]="activeSection === 'contact'" [attr.aria-current]="activeSection === 'contact' ? 'page' : null" (click)="selectSection('contact')">Contact</a>
     </div>
-    <a class="cta-btn" href="#contact">Request Consultation</a>
+    <a class="cta-btn" href="#contact" (click)="selectSection('contact')">Request Consultation</a>
     <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-controls="primary-navigation" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+      <span [class.open]="menuOpen"></span><span [class.open]="menuOpen"></span><span [class.open]="menuOpen"></span>
     </button>
   </nav>
 </header>
