@@ -36,8 +36,48 @@
 
 .footer-brand-lockup { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
 .footer-brand-lockup .brand-name { margin-bottom: 0; }
-.footer-brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--gold); color: white; font-family: 'Noto Serif', serif; font-size: 16px; font-weight: 700; letter-spacing: -.14em; line-height: 1; }
-.footer-brand-mark span { color: var(--gold); font-style: italic; margin: 0 1px; }
+.footer-brand-mark {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background: var(--primary);
+  color: #F5F2EA;
+  font-family: 'Noto Serif', serif;
+  line-height: 1;
+  flex: 0 0 50px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(245, 242, 234, 0.55);
+    pointer-events: none;
+  }
+}
+
+.footer-mark-letter {
+  position: relative;
+  z-index: 1;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.footer-mark-d { justify-self: end; transform: translate(3px, 1px); }
+.footer-mark-s { justify-self: start; transform: translate(-2px, 2px); }
+
+.footer-mark-ampersand {
+  position: relative;
+  z-index: 2;
+  color: var(--gold);
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 700;
+  transform: translateY(-1px);
+}
 
 .brand-desc {
   font-family: 'Work Sans', sans-serif;
