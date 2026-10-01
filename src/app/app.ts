@@ -3,6 +3,7 @@ import { NavbarComponent } from './components/navbar/navbar';
 import { HeroComponent } from './components/hero/hero';
 import { ServicesComponent } from './components/services/services';
 import { ProjectsComponent } from './components/projects/projects';
+import { ClientsComponent } from './components/clients/clients';
 import { WhyUsComponent } from './components/why-us/why-us';
 import { CtaComponent } from './components/cta/cta';
 import { FooterComponent } from './components/footer/footer';
@@ -16,6 +17,7 @@ import { ScrollRevealDirective } from './directives/scroll-reveal.directive';
     HeroComponent,
     ServicesComponent,
     ProjectsComponent,
+    ClientsComponent,
     WhyUsComponent,
     CtaComponent,
     FooterComponent,

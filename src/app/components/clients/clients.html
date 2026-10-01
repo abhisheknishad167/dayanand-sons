@@ -1,0 +1,18 @@
+<section class="clients" aria-labelledby="clients-title">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="eyebrow">Our Clients</span>
+      <h2 id="clients-title">Built on <em>trusted partnerships.</em></h2>
+      <p>Selected client identities presented in the Dayanand &amp; Sons work profile.</p>
+    </div>
+
+    <div class="client-grid">
+      @for (client of clients; track client.name) {
+        <div class="client-card" data-reveal>
+          <img [src]="client.image" [alt]="client.name" loading="lazy" decoding="async" />
+          <span>{{ client.name }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
