@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { CountUpDirective } from '../../directives/count-up.directive';
 
 @Component({
   selector: 'app-why-us',
   standalone: true,
+  imports: [CountUpDirective],
   templateUrl: './why-us.html',
   styleUrl: './why-us.scss'
 })

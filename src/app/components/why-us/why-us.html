@@ -1,7 +1,7 @@
 <section class="why-us" id="about" aria-labelledby="about-title">
   <div class="container">
     <div class="bento-grid">
-      <div class="bento-intro">
+      <div class="bento-intro" data-reveal>
         <div class="concrete-grain"></div>
         <h2 class="intro-title">
           <span id="about-title">Why Partners Choose <span class="accent">Dayanand &amp; Sons</span></span>
@@ -12,19 +12,19 @@
       </div>
 
       @for (feature of features; track feature.icon) {
-        <div class="feature-card">
+        <div class="feature-card" data-reveal>
           <span class="material-symbols-outlined feature-icon">{{ feature.icon }}</span>
           <h4 class="feature-title">{{ feature.title }}</h4>
           <p class="feature-desc">{{ feature.description }}</p>
         </div>
       }
 
-      <div class="stats-card">
+      <div class="stats-card" data-reveal>
         <div class="stats-inner">
           <div class="stats-row">
             @for (stat of stats; track stat.value; let last = $last) {
               <div class="stat-item">
-                <div class="stat-value">{{ stat.value }}</div>
+                <div class="stat-value"><span [appCountUp]="stat.value">{{ stat.value }}</span></div>
                 <div class="stat-label">{{ stat.label }}</div>
               </div>
               @if (!last) {
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="process-block">
+    <div class="process-block" data-reveal>
       <div>
         <span class="eyebrow">A clear path from brief to build</span>
         <h3>How we move a project forward</h3>

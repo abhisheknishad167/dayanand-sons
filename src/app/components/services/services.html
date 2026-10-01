@@ -1,7 +1,7 @@
 <section class="services" id="services" aria-labelledby="services-title">
   <div class="blueprint-lines bg-pattern"></div>
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <div class="header-left">
         <h2 class="section-title" id="services-title">Architectural &amp; Engineering <span class="accent">Disciplines</span></h2>
         <div class="title-bar"></div>
@@ -13,7 +13,7 @@
 
     <div class="services-grid">
       @for (service of services; track service.icon) {
-        <div class="service-card" [class.last]="$last">
+        <div class="service-card" data-reveal [class.last]="$last">
           <div class="concrete-grain"></div>
           <span class="material-symbols-outlined service-icon">{{ service.icon }}</span>
           <h3 class="service-title">{{ service.title }}</h3>

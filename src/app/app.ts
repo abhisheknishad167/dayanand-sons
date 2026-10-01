@@ -6,6 +6,7 @@ import { ProjectsComponent } from './components/projects/projects';
 import { WhyUsComponent } from './components/why-us/why-us';
 import { CtaComponent } from './components/cta/cta';
 import { FooterComponent } from './components/footer/footer';
+import { ScrollRevealDirective } from './directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer';
     ProjectsComponent,
     WhyUsComponent,
     CtaComponent,
-    FooterComponent
+    FooterComponent,
+    ScrollRevealDirective
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

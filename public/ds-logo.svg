@@ -1,5 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dayanand and Sons logo">
-  <rect width="64" height="64" rx="14" fill="#8f341d"/>
-  <rect x="7" y="7" width="50" height="50" rx="10" fill="none" stroke="#d4af37" stroke-width="2"/>
-  <text x="32" y="41" text-anchor="middle" fill="#fffaf1" font-family="Georgia, serif" font-size="25" font-weight="700" letter-spacing="-4">D&amp;S</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Dayanand &amp; Sons</title>
+  <desc id="logo-desc">Dayanand and Sons abstract D and S mark with wordmark</desc>
+
+  <g fill="none" stroke="#cfb66b" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="2.4" d="M50 10c18 10 29 20 26 32-3 14-25 22-62 39 24 4 49 5 74 6"/>
+    <path stroke-width="1.8" d="M50 10c2 18 2 40 2 78"/>
+    <path stroke-width="1.4" d="M10 82h88"/>
+  </g>
+  <text x="52" y="86" text-anchor="middle" fill="#cfb66b" font-family="Arial, sans-serif" font-size="6" letter-spacing="2">D&amp;S</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="500" letter-spacing="2">
+    <text x="120" y="58" fill="#cfb66b">DAYANAND</text>
+    <text x="328" y="58" fill="#cfb66b" font-size="42" font-weight="400">&amp;</text>
+    <text x="380" y="58" fill="#b5b2a7">SONS</text>
+  </g>
+  <g stroke-linecap="square">
+    <path stroke="#cfb66b" stroke-width="2" d="M120 70h202"/>
+    <path stroke="#b5b2a7" stroke-width="2" d="M382 70h116"/>
+  </g>
+  <text x="120" y="96" fill="#8c887e" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="600" letter-spacing="2.4">ENGINEERING &amp; CONSTRUCTION</text>
 </svg>

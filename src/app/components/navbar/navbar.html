@@ -1,12 +1,7 @@
 <header class="navbar" [class.scrolled]="isScrolled" [class.menu-open]="menuOpen">
   <nav class="nav-container">
     <a class="brand" href="#home" aria-label="Dayanand and Sons home" (click)="selectSection('home')">
-      <span class="brand-mark" aria-hidden="true">
-        <span class="mark-letter mark-d">D</span>
-        <span class="mark-ampersand">&amp;</span>
-        <span class="mark-letter mark-s">S</span>
-      </span>
-      <span class="brand-copy"><span>Dayanand <i>&amp;</i> Sons</span><small>Engineering &amp; Construction</small></span>
+      <img class="brand-logo" src="ds-logo.svg" alt="Dayanand &amp; Sons" />
     </a>
     <div class="nav-links" id="primary-navigation" [class.open]="menuOpen">
       <a href="#home" [class.active]="activeSection === 'home'" [attr.aria-current]="activeSection === 'home' ? 'page' : null" (click)="selectSection('home')">Home</a>

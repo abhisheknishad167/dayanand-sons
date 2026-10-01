@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Dayanand &amp; Sons — Engineering Pune's Future</title>
+  <desc id="description">A branded social sharing image for Dayanand &amp; Sons Engineering and Construction.</desc>
+  <rect width="1200" height="630" fill="#fcf9f3"/>
+  <path d="M780 0h420v630H640z" fill="#8f341d"/>
+  <g fill="none" stroke="#d4af37" stroke-width="2" opacity=".52">
+    <path d="M700 630 1000 0M810 630l300-630M920 630l280-590M640 540h560M675 450h525M710 360h490M745 270h455M780 180h420M815 90h385"/>
+    <path d="M760 630V70h300v560M825 630V140h170v490M1080 630V0M1140 630V0"/>
+  </g>
+  <rect x="74" y="72" width="92" height="92" fill="#8f341d"/>
+  <rect x="84" y="82" width="72" height="72" fill="none" stroke="#f5f2ea" stroke-width="2"/>
+  <text x="111" y="124" fill="#f5f2ea" font-family="Georgia,serif" font-size="36" font-weight="700" text-anchor="middle">D</text>
+  <text x="120" y="121" fill="#d4af37" font-family="Georgia,serif" font-size="23" font-style="italic" font-weight="700" text-anchor="middle">&amp;</text>
+  <text x="135" y="135" fill="#f5f2ea" font-family="Georgia,serif" font-size="36" font-weight="700" text-anchor="middle">S</text>
+  <text x="194" y="110" fill="#1c1c18" font-family="Georgia,serif" font-size="32" font-weight="700" letter-spacing="2">DAYANAND &amp; SONS</text>
+  <text x="196" y="144" fill="#56423d" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">ENGINEERING &amp; CONSTRUCTION</text>
+  <path d="M76 238h46" stroke="#d4af37" stroke-width="4"/>
+  <text x="76" y="322" fill="#1c1c18" font-family="Georgia,serif" font-size="60" font-weight="700">Built for Pune.</text>
+  <text x="76" y="394" fill="#8f341d" font-family="Georgia,serif" font-size="60" font-weight="700">Engineered to last.</text>
+  <text x="78" y="466" fill="#56423d" font-family="Arial,sans-serif" font-size="22">Engineering and construction shaped by</text>
+  <text x="78" y="501" fill="#56423d" font-family="Arial,sans-serif" font-size="22">local insight, technical care, and a long view.</text>
+  <text x="78" y="570" fill="#8f341d" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">PUNE, MAHARASHTRA</text>
+</svg>
