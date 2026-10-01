@@ -41,7 +41,7 @@
 
 .brand-logo {
   display: block;
-  width: 272px;
+  width: 180px;
   height: auto;
   transition: transform 0.25s ease;
 }
@@ -159,7 +159,7 @@
 }
 
 @media (max-width: 900px) {
-  .brand-logo { width: 220px; }
+  .brand-logo { width: 160px; }
   .nav-links { gap: 20px; }
   .nav-container { padding-left: 24px; padding-right: 24px; }
 }

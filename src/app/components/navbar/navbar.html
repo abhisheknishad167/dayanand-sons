@@ -1,7 +1,7 @@
 <header class="navbar" [class.scrolled]="isScrolled" [class.menu-open]="menuOpen">
   <nav class="nav-container">
     <a class="brand" href="#home" aria-label="Dayanand and Sons home" (click)="selectSection('home')">
-      <img class="brand-logo" src="ds-logo.svg" alt="Dayanand &amp; Sons" />
+      <img class="brand-logo" src="ds-logo.png" alt="Dayanand &amp; Sons" />
     </a>
     <div class="nav-links" id="primary-navigation" [class.open]="menuOpen">
       <a href="#home" [class.active]="activeSection === 'home'" [attr.aria-current]="activeSection === 'home' ? 'page' : null" (click)="selectSection('home')">Home</a>
